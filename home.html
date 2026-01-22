@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home | PYQ Library</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container mt-4">
+    <h2 class="text-center">📚 PYQ Library Application</h2>
+    <p class="text-center text-muted">Previous Year Question Papers – Digital Repository</p>
+
+    <hr>
+
+    <h4>About the Website</h4>
+    <p>
+        This PYQ Library Application helps students easily access
+        Previous Year Question Papers by subject, year, and semester.
+        It supports digital learning and exam preparation.
+    </p>
+
+    <h4>About the University</h4>
+    <p>
+        Developed for <strong>[Your University Name]</strong><br>
+        Department: Computer Science / IT
+    </p>
+
+    <h4>Developer Info</h4>
+    <p>
+        Name: [Your Name]<br>
+        Technologies: HTML, CSS, Bootstrap, Python (Flask), SQLite
+    </p>
+
+    <div class="text-center mt-4">
+        <a href="/library" class="btn btn-primary">📂 View Library</a>
+        <a href="/admin" class="btn btn-secondary">⚙ Admin</a>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PYQ Library</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container mt-4">
+    <h2 class="text-center">📂 PYQ Library</h2>
+
+    <!-- Search -->
+    <form method="POST" action="/library" class="row g-2 mb-3">
+        <div class="col-md-4">
+            <input type="text" name="subject" class="form-control" placeholder="Subject">
+        </div>
+        <div class="col-md-3">
+            <input type="text" name="year" class="form-control" placeholder="Year">
+        </div>
+        <div class="col-md-3">
+            <input type="text" name="semester" class="form-control" placeholder="Semester">
+        </div>
+        <div class="col-md-2 d-grid">
+            <button class="btn btn-primary">Search</button>
+        </div>
+    </form>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>Subject</th>
+            <th>Year</th>
+            <th>Semester</th>
+            <th>Download</th>
+        </tr>
+
+        {% for row in data %}
+        <tr>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>
+                <a href="/download/{{ row[4] }}" class="btn btn-success btn-sm">Download</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/" class="btn btn-secondary">🏠 Home</a>
+</div>
+
+</body>
+</html>
